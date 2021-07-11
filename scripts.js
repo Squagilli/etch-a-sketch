@@ -1,7 +1,7 @@
 const container = document.querySelector('#container');
 
-const gridA = document.createElement('div');
-gridA.classList.add('gridA');
-gridA.textContent = 'hello';
+const grid1 = document.createElement('div');
+grid1.classList.add('grid1');
+grid1.textContent = 'hello';
 
-container.appendChild(gridA);
+container.appendChild(grid1);
