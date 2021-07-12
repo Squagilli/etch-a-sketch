@@ -12,15 +12,15 @@ const header = document.querySelector('#header');
 header.innerText = 'Etch-a-Sketch';
 
 
-function makeCells() {
-    for (i = 0; i < 4096; i++){
+function makeCells(rows, columns) {
+    for (i = 0; i < (rows * columns); i++){
         const cell = document.createElement('div');
         cell.classList.add('cell');
         container.appendChild(cell);
     }
 }
 
-makeCells();
+makeCells(64, 64);
 
 function drawPicture(e) {
     
@@ -28,9 +28,15 @@ function drawPicture(e) {
 
 }
 
+
+
 const cells = document.querySelectorAll('.cell');
 
 cells.forEach(cell => cell.addEventListener('mouseover', drawPicture));
+
+clearBtn.addEventListener('click', function () {
+    document.querySelectorAll('.cell').forEach(item => item.style.backgroundColor = '#282828');
+})
 
 
 
