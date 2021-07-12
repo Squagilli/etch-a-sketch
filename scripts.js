@@ -1,15 +1,19 @@
 const container = document.querySelector('#container');
 
-const cell = document.createElement('div');
-cell.innerText = 'X';
+
+
 
 function makeCells(rows, columns) {
-    rows = rows.forEach(container.appendChild(cell));
-    columns = columns.forEach(container.appendChild(cell));
-
-    return rows, columns;
+    
+    for (i = 0; i < 4096; i++){
+        const cell = document.createElement('div');
+        cell.classList.add('cell');
+        container.appendChild(cell);
+        cell.innerText = 'x';
+    }
 
 
 }
 
-makeCells(16, 16);
+makeCells();
+

@@ -1,5 +1,16 @@
-#grid {
+#container {
     display: grid; 
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
+    justify-content: center;
+
+    grid-template-columns: repeat(64, 8px [col-start]);
+    grid-template-rows: repeat(64, 8px [row-start]);
+    text-align: center;
+
+    padding: 1em;
+}
+
+.cell {
+    border: 0.1px solid blue;
+
+    font-size: 4px;
 }
