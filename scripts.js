@@ -16,7 +16,7 @@ makeCells();
 
 function drawPicture(e) {
     
-    e.target.style.backgroundColor = 'red';
+    e.target.style.backgroundColor = '#3500D3';
 
 }
 

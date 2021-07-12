@@ -1,3 +1,10 @@
+body {
+    display: flex;
+    justify-content: center;
+
+    background-color: #282828;
+}
+
 #container {
     display: grid; 
     justify-content: center;
@@ -6,11 +13,18 @@
     grid-template-rows: repeat(64, 8px [row-start]);
     text-align: center;
 
-    padding: 1em;
+    padding: 0.8em;
+    margin-top: 1rem;
+
+
+    border: 5px solid #3500D3;
+
+    width: 33em;
+    height: 32.5em;
 }
 
 .cell {
-    border: 0.1px solid blue;
+    border: 0.1px solid #0C0032;
 
     font-size: 4px;
 }
