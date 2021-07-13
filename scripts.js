@@ -6,7 +6,7 @@ const clearBtn = document.querySelector('.clearBtn');
 clearBtn.innerText = 'Clear';
 
 const optBtn = document.querySelector('.options');
-optBtn.innerText = 'Options';
+optBtn.innerText = 'Colors';
 
 const header = document.querySelector('#header');
 header.innerText = 'Etch-a-Sketch';
@@ -22,8 +22,19 @@ function makeCells(rows, columns) { // generates cells of specified size
     }
 }
 
+
+const small = document.querySelector('.resolutionSmall');
+const medium = document.querySelector('.resolutionMed');
+const large = document.querySelector('resolutionLarge');
+
 let length = 64;
 let width = 64;
+
+
+
+
+
+
 
 makeCells(length, width);
 
