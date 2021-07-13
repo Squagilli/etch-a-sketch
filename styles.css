@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
 body {
     background-color: #182628;
 }
@@ -48,6 +50,8 @@ button {
   position: relative;
   transition: color .6s ease;
   overflow: hidden;
+
+  font-family: 'Nunito', sans-serif;
 }
 
 button {
@@ -64,7 +68,12 @@ button:hover {
     -ms-transition: all 0.2s ease;
     transition: all 0.2s ease;
 }
-
+.clearBtn {
+    background: red;
+}
+.resolutionSmall, .resolutionMed, .resolutionLarge {
+    background: #66FCF1;
+}
 .red {
     background: red;
 }
@@ -101,6 +110,9 @@ button:hover {
 
     text-align: center;
     color: #66FCF1;
+    font-family: 'Nunito', sans-serif;
+
+    font-size: 20px;
 
     padding: 2em;
 }
@@ -114,10 +126,15 @@ button:hover {
     color: #66FCF1;
 
     font-size: 50px;
+    font-family: 'Nunito', sans-serif;
 
     height: 2em;
 }
 
+.squagilli {
+    color: grey;
+    font-family: 'Nunito', sans-serif;
+}
 
 @media only screen and (max-width: 600px) {
     #container {
