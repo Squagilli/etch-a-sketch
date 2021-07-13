@@ -28,8 +28,6 @@ let width = 64;
 makeCells(length, width);
 
 
-
-
 function drawPictureBlue(e) {
     e.target.closest('.cell').style.backgroundColor = '#3500D3';
     
@@ -47,7 +45,7 @@ function drawPictureYellow(e) {
     
 }
 
-const cells = document.querySelectorAll('.cell');
+const cells = [...document.querySelectorAll('.cell')];
 
 const blueColor = document.querySelector('.blue')
 const redColor = document.querySelector('.red');
@@ -69,8 +67,6 @@ greenColor.addEventListener('click', function() {
 yellowColor.addEventListener('click', function() {
     cells.forEach(cell => cell.onmouseover = drawPictureYellow);
 })
-
-
 
 clearBtn.addEventListener('click', function () {
     document.querySelectorAll('.cell').forEach(item => item.style.backgroundColor = '#282828');
