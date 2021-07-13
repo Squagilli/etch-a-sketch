@@ -97,7 +97,7 @@ indigoColor.addEventListener('click', function() {
 })
 
 clearBtn.addEventListener('click', function () {
-    document.querySelectorAll('.cell').forEach(item => item.style.backgroundColor = '#282828');
+    document.querySelectorAll('.cell').forEach(item => item.style.backgroundColor = '#182628');
 })
 
 
