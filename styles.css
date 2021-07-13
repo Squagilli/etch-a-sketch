@@ -9,8 +9,6 @@ body {
 
     background-color: #182628;
 
-    border: 1px solid yellow;
-
     height: 51em;
 
 
@@ -108,8 +106,6 @@ button:hover {
     color: #66FCF1;
 
     padding: 2em;
-
-    border: 1px solid yellow;
 }
 .options {
     padding: 1em;
