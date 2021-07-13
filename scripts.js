@@ -29,20 +29,22 @@ makeCells(length, width);
 
 
 
-function drawPictureDefault(e) { // changes color of hovered cells
-    e.target.style.backgroundColor = '#3500D3'; 
-}
+
 function drawPictureBlue(e) {
-    e.target.style.backgroundColor = '#3500D3'; 
+    e.target.style.backgroundColor = '#3500D3';
+    
 }
 function drawPictureRed(e) {
-    e.target.style.backgroundColor = 'red'; 
+    e.target.style.backgroundColor = 'red';
+    
 }
 function drawPictureGreen(e) {
-    e.target.style.backgroundColor = 'green'; 
+    e.target.style.backgroundColor = 'green';
+    
 }
 function drawPictureYellow(e) {
-    e.target.style.backgroundColor = 'yellow'; 
+    e.target.style.backgroundColor = 'yellow';
+    
 }
 
 const cells = document.querySelectorAll('.cell');
@@ -52,19 +54,31 @@ const redColor = document.querySelector('.red');
 const greenColor = document.querySelector('.green');
 const yellowColor = document.querySelector('.yellow');
 
-cells.forEach(cell => cell.addEventListener('mouseover', drawPictureDefault));
+//cells.forEach(cell => cell.addEventListener('mouseover', drawPictureDefault));
 
 blueColor.addEventListener('click', function() {
+    
     cells.forEach(cell => cell.addEventListener('mouseover', drawPictureBlue));
+    cells.forEach(cell => cell.removeEventListener('mouseover', 
+    drawPictureRed, drawPictureGreen, drawPictureYellow));
 })
 redColor.addEventListener('click', function() {
+    
     cells.forEach(cell => cell.addEventListener('mouseover', drawPictureRed));
+    cells.forEach(cell => cell.removeEventListener('mouseover', drawPictureBlue,
+     drawPictureGreen, drawPictureYellow));
 })
 greenColor.addEventListener('click', function() {
+    
     cells.forEach(cell => cell.addEventListener('mouseover', drawPictureGreen));
+    cells.forEach(cell => cell.removeEventListener('mouseover', drawPictureBlue, 
+    drawPictureRed, drawPictureYellow));
 })
 yellowColor.addEventListener('click', function() {
+    
     cells.forEach(cell => cell.addEventListener('mouseover', drawPictureYellow));
+    cells.forEach(cell => cell.removeEventListener('mouseover', drawPictureBlue, 
+    drawPictureRed, drawPictureGreen));
 })
 
 
