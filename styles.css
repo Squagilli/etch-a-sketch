@@ -27,15 +27,12 @@ body {
     margin-top: 0.1rem;
 
 
-    border: 5px solid #3B945E;
 
     width: 50em;
     height: 48em;
 }
 
-.cell {
-    border: 0.1px solid #182628;
-}
+
 
 button {
   width: 15em;
