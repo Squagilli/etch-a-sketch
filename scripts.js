@@ -38,6 +38,7 @@ function makeCells(resolution) { // generates cells of specified size
     const indigoColor = document.querySelector('.indigo');
     const blackColor = document.querySelector('.black');
     const whiteColor = document.querySelector('.white');
+    const eraser = document.querySelector('.erase');
 
     // event listeners for mouseover on cells
     cells.forEach(cell => cell.onmouseover = drawPictureBlue); // default color
@@ -68,6 +69,9 @@ function makeCells(resolution) { // generates cells of specified size
     })
     whiteColor.addEventListener('click', function() {
         cells.forEach(cell => cell.onmouseover = drawPictureWhite);
+    })
+    eraser.addEventListener('click', function() {
+        cells.forEach(cell => cell.onmouseover = erase);
     })
 
     clearBtn.addEventListener('click', function () {
@@ -112,15 +116,23 @@ function drawPictureBlack(e) {
 function drawPictureWhite(e) {
     e.target.closest('.cell').style.backgroundColor = 'white';
 }
+function erase(e) {
+    e.target.closest('.cell').style.backgroundColor = '#182628';
+}
 
 slider.addEventListener('mouseup', changeSize);
 
+
 // found media query template on w3schools
 function mediaQuery(x) {
+    slider.addEventListener('mousedown', changeSize);
     if (x.matches) { // If media query matches
-      document.body.style.backgroundColor = '#182628';
+      header.textContent = 'Etch-a-Sketch (mobile)';
+      document.querySelector('#btnArea').style.width = '350px'
+      document.querySelector('.instructions').innerText = 'Tap on the box to draw \n Slider not compatible with mobile devices';
     } else {
-      document.body.style.backgroundColor = '#182628';
+        header.textContent = 'Etch-a-Sketch';
+        document.querySelector('.instructions').innerText = 'Mouse over the canvas to draw\nUse slider to change pixel size'
     }
   }
   
