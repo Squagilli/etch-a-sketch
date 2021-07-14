@@ -129,7 +129,7 @@ function mediaQuery(x) {
     if (x.matches) { // If media query matches
       header.textContent = 'Etch-a-Sketch (mobile)';
       document.querySelector('#btnArea').style.width = '350px'
-      document.querySelector('.instructions').innerText = 'Tap on the box to draw \n Slider not compatible with mobile devices';
+      document.querySelector('.instructions').innerText = 'Tap on the box to draw';
     } else {
         header.textContent = 'Etch-a-Sketch';
         document.querySelector('.instructions').innerText = 'Mouse over the canvas to draw\nUse slider to change pixel size'
