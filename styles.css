@@ -134,8 +134,8 @@ button:hover {
     align-self: center;
     padding: 0.8em;
     margin-top: 0.1rem;
-    width: 70vw;
-    height: 70vw;
+    width: 75vw;
+    height: 75vw;
     background-color: #182628;
 }
 #btnArea, #optionsArea {
