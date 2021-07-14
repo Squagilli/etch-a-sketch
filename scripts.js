@@ -115,8 +115,18 @@ function drawPictureWhite(e) {
 
 slider.addEventListener('mouseup', changeSize);
 
-
-
+// found media query template on w3schools
+function mediaQuery(x) {
+    if (x.matches) { // If media query matches
+      document.body.style.backgroundColor = '#182628';
+    } else {
+      document.body.style.backgroundColor = '#182628';
+    }
+  }
+  
+  let x = window.matchMedia("(max-width: 700px)")
+  mediaQuery(x); // Call listener function at run time
+  x.addListener(mediaQuery); // Attach listener function on state changes
 
 
 
