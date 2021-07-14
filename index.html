@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
         <link rel="stylesheet" href="styles.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,11 +12,11 @@
        <div id='header'></div>
         <div id='box'>
             <div id='btnArea'>
-                <button class='clearBtn'></button>
-                <button class='resolutionSmall'>16 px</button>
-                <button class='resolutionMed'>32 px</button>
-                <button class='resolutionLarge'>64 px</button>
                 <p>Mouse over the center of the page</p>
+                <button class='clearBtn'></button>
+                <p>Move the slider below to change cell size (desktop only)</p>
+                <input type="range" min="4" max="100" value="15" id="sizeRange" class="slider">
+                
             </div>
             <div id='container'></div>
             <div id='optionsArea'>
@@ -27,6 +28,9 @@
                 <button class='orange'>Orange</button>
                 <button class='indigo'>Indigo</button>
                 <button class='violet'>Violet</button>
+                <button class='black'>Black</button>
+                <button class='white'>White</button>
+                <canvas id='color-picker'></canvas>
             </div>
         </div>
         <footer class='sig'>@Squagilli</footer>
